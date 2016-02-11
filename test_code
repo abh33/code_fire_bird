@@ -1,0 +1,20 @@
+
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(36, OUTPUT);     
+  digitalWrite(36, 0);                        //Pin on which LCD RW pin in connected. It is set as LOW
+  pinMode(34, OUTPUT);
+  
+  motor_init();
+ 
+  attachInterrupt(1, incrementright , FALLING);    //Right encoder interrupt attach
+  attachInterrupt(0, incrementleft, FALLING);      // Left encoder interupt attach
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  
+}
